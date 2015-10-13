@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HelloSeaJS</title>
+    <link rel="stylesheet" href="assets/styles/site.css" />
+</head>
+<body>
+<h1 id="hello-seajs">
+    Hello SeaJS
+</h1>
+
+<!--<script src="assets/scripts/seajs/sea.js" id="seajsnode" data-main="application/application.js"></script>
+    此语法糖在3.0已弃用
+-->
+<script src="assets/scripts/seajs/sea.js" id="seajsnode"></script>
+
+<script>
+    seajs.config({
+        base: "./assets/scripts/",
+        alias: {
+            'jquery': 'application/dist/jquery.js'
+        }
+    });
+    seajs.use("application/dist/application");
+</script>
+
+</body>
+</html>
